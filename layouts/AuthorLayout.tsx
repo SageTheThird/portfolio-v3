@@ -2,7 +2,16 @@ import { Header } from '@/components/Form';
 import StackList from '@/components/list/StackList';
 import { PageSEO } from '@/components/SEO';
 import { useRandomColorPair } from '@/lib/hooks/useRandomColorPair';
-import { WorkStack } from 'config/stack';
+import {
+  LanguageStackStack,
+  WebDevelopmentStack,
+  MobileDevelopmentStack,
+  CloudServicesStack,
+  DatabaseAndVizStack,
+  TestingCiCDStack,
+  MonitoringStack,
+  ProgramsAndToolsStack,
+} from 'config/stack';
 import Image from 'next/image';
 import { ReactNode } from 'react';
 import { RoughNotation } from 'react-rough-notation';
@@ -31,7 +40,7 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
               height='192px'
               className='h-48 w-48 rounded-full'
             />
-            <h3 className='pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight'>
+            <h3 className='pb-2 pt-4 text-2xl font-bold leading-8 tracking-tight'>
               {name}
             </h3>
             <div className='font-medium text-gray-500 dark:text-gray-400'>
@@ -40,7 +49,7 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
             <div className='text-gray-500 dark:text-gray-400'>{company}</div>
           </div>
 
-          <div className='prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2'>
+          <div className='prose max-w-none pb-8 pt-8 dark:prose-dark xl:col-span-2'>
             {children}
             <p className='mt-8'>
               <a
@@ -60,10 +69,49 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
                   Resume
                 </RoughNotation>
               </a>
-              <h2 className='mt-8 mb-4 text-2xl font-semibold dark:text-white'>
+              <h2 className='mb-4 mt-8 text-2xl font-semibold dark:text-white'>
                 Skills
               </h2>
-              <StackList stack={WorkStack} />
+
+              <h4 className='mb-2 mt-4 text-xl font-semibold dark:text-white'>
+                Languages
+              </h4>
+              <StackList stack={LanguageStackStack} />
+
+              <h4 className='mb-2 mt-4 text-xl font-semibold dark:text-white'>
+                Web Development
+              </h4>
+              <StackList stack={WebDevelopmentStack} />
+
+              <h4 className='mb-2 mt-4 text-xl font-semibold dark:text-white'>
+                Mobile Development
+              </h4>
+              <StackList stack={MobileDevelopmentStack} />
+
+              <h4 className='mb-2 mt-4 text-xl font-semibold dark:text-white'>
+                Cloud Services
+              </h4>
+              <StackList stack={CloudServicesStack} />
+
+              <h4 className='mb-2 mt-4 text-xl font-semibold dark:text-white'>
+                Database & Data Visualization
+              </h4>
+              <StackList stack={DatabaseAndVizStack} />
+
+              <h4 className='mb-2 mt-4 text-xl font-semibold dark:text-white'>
+                Testing & CI/CD
+              </h4>
+              <StackList stack={TestingCiCDStack} />
+
+              <h4 className='mb-2 mt-4 text-xl font-semibold dark:text-white'>
+                Monitoring
+              </h4>
+              <StackList stack={MonitoringStack} />
+
+              <h4 className='mb-2 mt-4 text-xl font-semibold dark:text-white'>
+                Programs & Tools
+              </h4>
+              <StackList stack={ProgramsAndToolsStack} />
             </p>
           </div>
         </div>

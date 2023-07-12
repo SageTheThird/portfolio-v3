@@ -43,8 +43,6 @@ export const projects: Project[] = [
       'Ready to deploy, distributed cryptocurrency trading bot.',
     repository: 'https://github.com/karanpratapsingh/HyperTrade',
     stack: [
-      Stack.nats,
-      Stack.go,
       Stack.typescript,
       Stack.react,
       Stack.python,
@@ -75,14 +73,7 @@ export const projects: Project[] = [
     shortDescription:
       'Peapods is a new type of decentralized social network that values real human interaction.',
     repository: null,
-    stack: [
-      Stack.javascript,
-      Stack.react,
-      Stack.node,
-      Stack.graphql,
-      Stack.aws,
-      Stack.arangodb,
-    ],
+    stack: [Stack.javascript, Stack.react],
     screenshots: [],
     deployment: {
       web: 'https://peapods.com',
@@ -97,13 +88,7 @@ export const projects: Project[] = [
     description:
       'An open source social media app that does not use your data against you.',
     repository: 'https://github.com/karanpratapsingh/Proximity',
-    stack: [
-      Stack.typescript,
-      Stack.reactnative,
-      Stack.node,
-      Stack.graphql,
-      Stack.postgres,
-    ],
+    stack: [Stack.typescript, Stack.reactnative],
     screenshots: [
       'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fproximity%2Fscreenshots%2Fscreenshot-1.png?alt=media&token=a9b5a094-8a16-4c84-af16-65bf2378d7d9',
       'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fproximity%2Fscreenshots%2Fscreenshot-2.png?alt=media&token=fca4c07e-c922-445e-a259-a06c038e0974',
@@ -129,13 +114,7 @@ export const projects: Project[] = [
     website: 'https://boom.london',
     description: `Connect with shoppers who need your advice and expertise when they're shopping online. Assist and sell to customers the same way you would in-store, but now through chat and video straight from the app.`,
     repository: null,
-    stack: [
-      Stack.javascript,
-      Stack.react,
-      Stack.reactnative,
-      Stack.graphql,
-      Stack.gcp,
-    ],
+    stack: [Stack.javascript, Stack.react, Stack.reactnative],
     screenshots: [
       'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fvelvet%2Fscreenshots%2Fscreenshot-1.png?alt=media&token=b9b044ce-a3af-402f-a1db-1ae61621bb18',
       'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fvelvet%2Fscreenshots%2Fscreenshot-2.png?alt=media&token=f551d87b-4f74-4d06-b81e-50ea8bf7feba',
@@ -160,13 +139,7 @@ export const projects: Project[] = [
     banner: '/static/projects/stewards/banner.png',
     description:
       'Mobile ordering solution with robot delivery. Stewards also provides variety of tools like staff application to manage orders, self checkout solution and admin dashboard.',
-    stack: [
-      Stack.javascript,
-      Stack.react,
-      Stack.reactnative,
-      Stack.graphql,
-      Stack.gcp,
-    ],
+    stack: [Stack.javascript, Stack.react, Stack.reactnative],
     screenshots: [
       'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fstewards%2Fscreenshots%2Fscreenshot-1.png?alt=media&token=ba9d7163-8df6-43ae-b804-01cd221cc593',
       'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fstewards%2Fscreenshots%2Fscreenshot-2.png?alt=media&token=c8194dc7-08cf-4b8c-a3ad-f6c643291a95',
@@ -220,7 +193,7 @@ export const projects: Project[] = [
     description:
       'Get personalized videos from your favorite celebrities at just one click. Request personalized video messages for your friends, family, loved ones or even yourself. Be it a doubt or even a special wish from your favorite celebrity.',
     repository: null,
-    stack: [Stack.react, Stack.reactnative, Stack.django, Stack.aws],
+    stack: [Stack.react, Stack.reactnative],
     dimensions: [450, 270],
     screenshots: [
       'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fcelebrify%2Fscreenshots%2Fscreenshot-1.png?alt=media&token=93fffd15-08ca-4ffc-8fce-47bc269237ee',
@@ -245,7 +218,7 @@ export const projects: Project[] = [
     description:
       'KCards is your one-stop replacement for paper cards. KCards help you to easily share your cards with other users and get real-time analytics on the shared cards.',
     repository: 'https://github.com/karanpratapsingh/KCards',
-    stack: [Stack.react, Stack.reactnative, Stack.node, Stack.mongo],
+    stack: [Stack.react, Stack.reactnative],
     dimensions: [450, 270],
     screenshots: [
       'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fkcards%2Fscreenshots%2Fscreenshot-1.png?alt=media&token=5de462e1-7368-49fd-843f-abd4cccb3317',
