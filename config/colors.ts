@@ -1,46 +1,83 @@
 export const Colors = {
   // Languages
-  go: '#00ADD8',
-  python: '#4B8BBE',
-  typescript: '#234A84',
   javascript: '#F7DF1E',
+  typescript: '#234A84',
+  java: '#007396',
+  kotlin: '#0095D5',
+  python: '#4B8BBE',
+  swift: '#FA7343',
+  css: '#563D7C',
+  tailwind: '#06B6D4',
+  cpp: '#F34B7D',
+  html: '#E44D26',
+  yaml: '#6C6C6C',
+  xml: '#FF9900',
 
-  // Frontend
-  web: '#2D2D2D',
-  react: '#61DAF6',
+  // Web Development
+  nodejs: '#68A063',
+  react: '#61DAFB',
+  express: '#000000',
+  mongodb: '#589636',
+  gatsby: '#663399',
   nextjs: '#000000',
 
-  // Backend
-  graphql: '#E535AB',
-  node: '#68A063',
-  django: '#092E20',
+  // Mobile Development
+  androidsdk: '#3DDC84',
+  iossdk: '#64D1FF',
+  rxandroid: '#B3DB48',
+  rxswift: '#C3D82C',
+  reactnative: '#61DAFB',
+  room: '#6182B8',
+  coredata: '#002654',
 
-  // Tools, Libs
-  webpack: '#8DD6F9',
-  babel: '#F5DB53',
-  redux: '#764ABC',
+  // Cloud Services
+  awslambda: '#FF9900',
+  awscloudwatch: '#009CC9',
+  awsdynamodb: '#4053D6',
+  awss3: '#569A31',
+  linux: '#FFBF00',
+  firebase: '#FFCA28',
 
-  // Mobile
-  reactnative: '#2D2D2D',
-  android: '#56A036',
-  ios: '#0C76E2',
+  // Database & Data Viz
+  sql: '#336791',
+  kafka: '#231F20',
+  nosql: '#00758F',
+  awsrds: '#00758F',
+  firebasenosql: '#FFCA28',
+  looker: '#5F5F5F',
+  metabase: '#509EE3',
 
-  // Databases
-  arangodb: '#68A063',
-  postgres: '#336791',
-  mongo: '#4DB33D',
-  redis: '#D82C20',
+  // Testing & CI/CD
+  jest: '#99425B',
+  chai: '#A30701',
+  githubactions: '#2088FF',
+  hilt: '#5691F0',
+  dagger2: '#FFBF00',
+  expresso: '#5D4037',
+  xcuitest: '#0D96F2',
+  cicd: '#F20544',
+  slackintegrations: '#4A154B',
 
-  // Cloud
-  aws: '#FF9900',
-  gcp: '#4285F4',
-  docker: '#0DB7Ed',
+  // Monitoring
+  postman: '#FF6C37',
+  awssynthetics: '#FF9900',
+  awsec2monitoring: '#FF9900',
+  moesif: '#33475B',
+
+  // Programs/Tools
+  docker: '#2496ED',
   kubernetes: '#326CE5',
-  terraform: '#7B42BC',
-
-  // Messaging
-  nats: '#199bfc',
-  kafka: '#000000',
+  terraform: '#5C4EE5',
+  vscode: '#007ACC',
+  expo: '#000020',
+  androidstudio: '#3DDC84',
+  pycharm: '#21D4FD',
+  wordpress: '#21759B',
+  ahreafs: '#33475B',
+  slack: '#4A154B',
+  jira: '#0052CC',
+  msoffice: '#D83B01',
+  zaplin: '#FF813F',
 
   // Social
   linkedin: '#0077B5',

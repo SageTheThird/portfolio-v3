@@ -1,18 +1,20 @@
 ---
-name: Karan Pratap Singh
-shortname: Karan
+name: Sajid Javed
+shortname: Sajid
 avatar: /static/avatar.jpg
-occupation: Software Engineer
-company: Curebase
-resume: /static/Karan_Resume.pdf
-email: contact@karanpratapsingh.com
-twitter: https://twitter.com/karan_6864
-linkedin: https://www.linkedin.com/in/karan99
-github: https://github.com/karanpratapsingh
+occupation: Full-Stack Software Engineer
+company: Darkblock
+resume: /static/SajidJavedResume2023.pdf
+email: ksajid505@gmail.com
+twitter: https://twitter.com/sajid.javed
+linkedin: https://www.linkedin.com/in/sajidjavedxyz
+github: https://github.com/SageTheThird
 ---
 
-A software engineer who values learning and growing with people, teams, and technologies.
+Hello world! I&apos;m a software craftsman and self-proclaimed digital artist. Give me some coffee, a line of code, and watch as I sculpt it into a digital masterpiece.
 
-Presently, I am working as a Software Engineer at [Curebase](https://www.curebase.com) where I am helping to build a decentralized clinical trial platform while scaling infrastructure with a focus on security, HIPAA, and GDPR compliance.
+I&apos;ve spent the last four years diving head-first into everything from web development to blockchain tech. I&apos;ve even managed to put my thoughts into words, sharing my journey and what I&apos;ve learned along the way through tech writing.
 
-Previously I've worked with the Digitization Program Office (DPO) at the [Smithsonian Institution](https://www.si.edu) as a consulting Full Stack Engineer in collaboration with the Office of the Chief Information Officer (OCIO).
+In my downtime, I love venturing into the great outdoors, immersing myself in the intricacies of fictional worlds, and gearing up for adrenaline-packed sessions of Apex Legends. I&apos;m an avid reader with a penchant for captivating tales that stretch the imagination and a competitive gamer always ready for the next match.
+
+So, if you&apos;re looking for a developer with an insatiable curiosity and a knack for problem-solving, feel free to drop me a line. Let&apos;s create something amazing together.
