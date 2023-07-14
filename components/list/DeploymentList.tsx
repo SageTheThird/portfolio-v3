@@ -5,13 +5,14 @@ import { AiOutlineLink } from 'react-icons/ai';
 
 interface DeploymentListProps {
   deployment: Deployment;
+  repository: string | null;
 }
 
 function DeploymentList(props: DeploymentListProps): React.ReactElement {
-  const { deployment } = props;
+  const { deployment, repository } = props;
 
   function renderList(type: string): React.ReactNode {
-    const background = Colors[type];
+    const background = Colors.nodejs;
     const link = deployment[type];
 
     return (
@@ -22,8 +23,25 @@ function DeploymentList(props: DeploymentListProps): React.ReactElement {
         target='_blank'
         rel='noopener noreferrer'
       >
+        <AiOutlineLink className='mr-1' size={16} />
+        {'Live'}
+      </a>
+    );
+  }
+
+  function renderRepository(): React.ReactNode {
+    if (!repository) return null;
+
+    return (
+      <a
+        className='mr-2 flex items-center rounded-sm px-2 py-1 text-xs font-medium text-white'
+        href={repository}
+        style={{ background: Colors.looker }}
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         <AiOutlineLink className='mr-1' size={15} />
-        {type}
+        Github
       </a>
     );
   }
@@ -31,6 +49,7 @@ function DeploymentList(props: DeploymentListProps): React.ReactElement {
   return (
     <div className='flex'>
       {React.Children.toArray(Object.keys(deployment).map(renderList))}
+      {renderRepository()}
     </div>
   );
 }
