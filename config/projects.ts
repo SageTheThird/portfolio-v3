@@ -38,12 +38,10 @@ export const projects: Project[] = [
     banner: '/static/projects/darkblock/banner.png',
     website: 'https://www.darkblock.io/',
     description: `Darkblock is Web3's missing encryption and access control layer. It is a decentralized chain-agnostic protocol that enables creators to control the distribution and monetization of their content.
-
     A darkblock is a piece of content encrypted by the Darkblock Protocol and stored on Arweave (where it will live for at least 200 years).
-    
     A darkblock is immutably linked to an NFT. Only the creator of the NFT can add a darkblock to it and only the owner of the NFT can access it. NFT creators can add darkblock unlockable content even after the NFT has been sold.`,
     shortDescription: 'Unlock the power of Web3-native publishing',
-    repository: 'https://github.com/karanpratapsingh/HyperTrade',
+    repository: 'https://github.com/darkblockio',
     stack: [
       Stack.javascript,
       Stack.nodejs,
@@ -63,15 +61,15 @@ export const projects: Project[] = [
       Stack.metabase,
       Stack.looker,
     ],
-    dimensions: [360, 640],
+    dimensions: [400, 680],
     screenshots: [
-      'https://drive.google.com/uc?export=view&id=18ft-hSELtABageq1t1caF--mt4HX-gGn',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fhypertrade%2Fdataframe.png?alt=media&token=f2e6523c-c9de-4fde-8fb3-434c74eb20d8',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fhypertrade%2Fportfolio.png?alt=media&token=8f4e3da1-2dc2-4382-9fc8-1fbc18a98146',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fhypertrade%2Fconfig.png?alt=media&token=f619b1da-47d5-4c33-b4d0-368adaead1c8',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fhypertrade%2Fconfig-strategy.png?alt=media&token=68693230-4fce-420b-b419-d211a9568dc5',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fhypertrade%2Fcharts-indicators.png?alt=media&token=21c7875f-5abe-4ceb-8057-4d7a70b67d33',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-8fa71.appspot.com/o/projects%2Fhypertrade%2Ftelegram.png?alt=media&token=110874dd-fb96-4dd2-b299-12a62b092a04',
+      'OuDBzls.png',
+      'os1I98X.png',
+      'NOIse8w.png',
+      '6Om4Nza.png',
+      'ABnRSYK.png',
+      'MBIUsfB.png',
+      'aXlf0Wo.png',
     ],
     deployment: {
       web: 'https://www.darkblock.io/',
@@ -79,30 +77,37 @@ export const projects: Project[] = [
     subProjects: [
       {
         title: 'Darkblock Web-App',
-        repository: null,
-        description:
-          'Staff app for stewards restaurant staff, easily update menu, product availability and take live orders from customers.',
-        deployment: {
-          android:
-            'https://play.google.com/store/apps/details?id=app.stewards.staff&hl=en',
-        },
-      },
-      {
-        title: 'Admin Dashboard',
-        repository: null,
+        repository: 'https://github.com/darkblockio',
         description: `The Darkblock web app, app.darkblock.io is a place where NFT creators can add Darkblock unlockable content to NFTs and NFT collections they have created.
 
           It is also a place where owners can access Darkblock unlockable content that has been added to NFTs they own.`,
         deployment: {
-          web: 'https://manage.stewards.app',
+          web: 'https://app.darkblock.io',
         },
       },
       {
-        title: 'Self Checkout',
-        repository: null,
-        description:
-          "Stewards self checkout solution for customers who don't like waiting. Available on demand for iPad and tablets.",
-        deployment: {},
+        title: 'Darkblock-API',
+        repository: 'https://github.com/darkblockio',
+        description: `The Darkblock API is a tool for partners to integrate with the Darkblock Protocol quickly and easily with simple REST requests. The API enables you to mint Darkblocks, a piece of content that acts as an upgrade to an NFT, that only the NFT owner can access.`,
+        deployment: {
+          web: 'https://darkblock.redoc.ly/openapi/core/tag/Darkblock-API/',
+        },
+      },
+      {
+        title: 'Admin Dashboard',
+        repository: 'https://github.com/darkblockio',
+        description: `The internal Darkblock dashboard used to monitor the metrics that mattered the most in driving the business forward. Build with React, TailwindCSS and Tremor `,
+        deployment: {
+          web: 'https://darkblock-dashboard.vercel.app/',
+        },
+      },
+      {
+        title: 'NPM Packages For Various Chains',
+        repository: 'https://github.com/darkblockio',
+        description: `Variety of npms available to make integration easy into developer's/partner's React project. The shared component repo is at the center of all of our other npm projects. This contains our media viewer which helps take popular file formats and render them in browser for consumption. The platform specific npms below use the shared component as a base.`,
+        deployment: {
+          web: 'https://www.npmjs.com/search?q=keywords:darkblock.io',
+        },
       },
     ],
   },
