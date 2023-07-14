@@ -82,7 +82,7 @@ export default function Project({
         <Conditional condition={!!deployment}>
           <DeploymentList deployment={deployment} />
         </Conditional>
-        <p className='mt-2 mb-4 font-light'>{description}</p>
+        <p className='mb-4 mt-2 font-light'>{description}</p>
       </>
     ),
     [],
@@ -99,12 +99,20 @@ export default function Project({
         description={shortDescription || description}
         imageUrl={banner}
       />
-      <H1 className='lg:text-5x mb-4 text-3xl font-bold dark:text-white'>
+      <div className='relative mt-10 w-full md:h-36 lg:h-48'>
+        <Image
+          alt={title}
+          src={banner}
+          className='absolute h-full w-full object-cover object-center'
+          layout='fill'
+        />
+      </div>
+      <H1 className='lg:text-5x mb-4 mt-20 text-3xl font-bold dark:text-white'>
         {title}
       </H1>
       <p className='mb-4 font-light'>{description}</p>
 
-      <H2>Stack</H2>
+      <H2>Tech</H2>
       <StackList stack={stack} />
 
       <Conditional condition={hasDeployments}>
@@ -115,7 +123,7 @@ export default function Project({
       <Conditional condition={hasScreenshots}>
         <H2 className='my-4'>Screenshots</H2>
         <ScrollContainer
-          className='list mt-4 mb-1 flex overflow-auto'
+          className='list mb-1 mt-4 flex overflow-auto'
           hideScrollbars={false}
         >
           {React.Children.toArray(screenshots.map(renderScreenShotList))}
@@ -124,7 +132,7 @@ export default function Project({
 
       <Conditional condition={hasSubProjects}>
         <H2 className='mt-4'>More Products</H2>
-        <p className='mt-1 mb-4 font-light'>Some additional products</p>
+        <p className='mb-4 mt-1 font-light'>Some additional products</p>
         {React.Children.toArray(subProjects.map(renderSubProjectList))}
       </Conditional>
     </>
