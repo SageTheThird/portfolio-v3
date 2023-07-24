@@ -57,19 +57,31 @@ export default function Project({
         width,
       };
 
+      // Check if the screenshot link is a video
+      const isVideo = screenshot.endsWith('.mp4'); // Adjust this condition based on your needs
+
       return (
         <div
           className='mr-2 flex-shrink-0 overflow-hidden rounded bg-placeholder-light p-1 dark:bg-placeholder-dark'
           style={style}
         >
-          <Image
-            loading='eager'
-            src={screenshot}
-            height={height}
-            width={width}
-            objectFit='cover'
-            alt=''
-          />
+          {isVideo ? (
+            // Render video if it's a video link
+            <video width={width} height={height} controls autoPlay loop muted>
+              <source src={screenshot} type='video/mp4' />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            // Render image if it's an image link
+            <Image
+              loading='eager'
+              src={screenshot}
+              height={height}
+              width={width}
+              objectFit='cover'
+              alt=''
+            />
+          )}
         </div>
       );
     },
@@ -115,12 +127,14 @@ export default function Project({
           ></iframe>
         </div>
       ) : (
-        <div className='relative mt-10 w-full md:h-36 lg:h-48'>
+        <div className='relative mt-10'>
           <Image
             alt={title}
             src={banner}
-            className='absolute h-full w-full object-cover object-center'
-            layout='fill'
+            className='absolute w-full object-scale-down object-center'
+            layout='responsive'
+            width={600} // Replace with your image's width
+            height={350} // Replace with your image's height
           />
         </div>
       )}

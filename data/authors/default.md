@@ -11,10 +11,8 @@ linkedin: https://www.linkedin.com/in/sajidjavedxyz
 github: https://github.com/SageTheThird
 ---
 
-Hello world! I&apos;m a software craftsman and self-proclaimed digital artist. Give me some coffee, a line of code, and watch as I sculpt it into a digital masterpiece.
+Hello world! Fueled by coffee and passion, I transform lines of code into impactful digital solutions. As a dedicated software craftsman and self-proclaimed digital artist, I've spent the last four years diving head-first into web development, blockchain technology, and more. Throughout my journey, I've channeled my insights into technical writing, sharing my knowledge and experiences with a wider audience.
 
-I&apos;ve spent the last four years diving head-first into everything from web development to blockchain tech. I&apos;ve even managed to put my thoughts into words, sharing my journey and what I&apos;ve learned along the way through tech writing.
+Beyond the screen, I have diverse interests. I love venturing into the great outdoors, immersing myself in the intricacies of fictional worlds, and gearing up for adrenaline-packed gaming sessions, especially in titles like Apex Legends. An avid reader, I have a penchant for captivating tales that stretch the imagination, and as a competitive gamer, I'm always ready for the next match.
 
-In my downtime, I love venturing into the great outdoors, immersing myself in the intricacies of fictional worlds, and gearing up for adrenaline-packed sessions of Apex Legends. I&apos;m an avid reader with a penchant for captivating tales that stretch the imagination and a competitive gamer always ready for the next match.
-
-So, if you&apos;re looking for a developer with an insatiable curiosity and a knack for problem-solving, feel free to drop me a line. Let&apos;s create something amazing together.
+So, if you're seeking a developer with insatiable curiosity and a knack for problem-solving, let's connect. Together, we can create something truly amazing.
