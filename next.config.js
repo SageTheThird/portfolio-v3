@@ -67,6 +67,7 @@ module.exports = withBundleAnalyzer({
       'drive.google.com',
       'imgur.com',
       'i.imgur.com',
+      'opengraph.githubassets.com',
     ],
   },
   async headers() {

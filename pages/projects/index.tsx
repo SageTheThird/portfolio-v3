@@ -12,7 +12,7 @@ export default function Projects() {
         description={siteMetadata.description}
       />
       <div className='fade-in divide-y-2 divide-gray-100 dark:divide-gray-800'>
-        <Header title='Projects' />
+        <Header title='Full-Time' />
         <div className='container py-12'>
           <div className='-m-4 flex flex-wrap'>
             {config.projects.map(({ slug, title, description, banner }) => (
@@ -22,6 +22,23 @@ export default function Projects() {
                 description={description}
                 banner={banner}
                 href={`/projects/${slug}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className='fade-in divide-y-2 divide-gray-100 dark:divide-gray-800'>
+        <Header title='Side' />
+        <div className='container py-12'>
+          <div className='-m-4 flex flex-wrap'>
+            {config.sideprojects.map(({ slug, title, description, banner }) => (
+              <Card
+                key={slug}
+                title={title}
+                description={description}
+                banner={banner}
+                href={`${slug}`}
               />
             ))}
           </div>

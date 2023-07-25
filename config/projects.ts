@@ -33,7 +33,8 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'Darkblock',
+    title:
+      'Darkblock: Revolutionizing Content with Web3 - Unlock, Engage, and Monetize with NFTs!',
     slug: 'darkblock',
     banner: '/static/projects/darkblock/banner.png',
     website: 'https://www.darkblock.io/',
@@ -149,6 +150,38 @@ export const projects: Project[] = [
       web: 'https://prislo.com/',
       android:
         'https://play.google.com/store/apps/details?id=com.prislo.prisloapp&hl=en_SG&gl=US',
+    },
+    subProjects: [],
+  },
+  {
+    title: 'Dads Agree: The Ultimate Parenting Resource',
+    slug: 'dadsagree',
+    banner: '/static/projects/dadsagree/banner.png',
+    website: 'https://dadsagree.com/',
+    description: `"Dads Agree" is a unique platform uniting over 30 dedicated fathers from diverse professions, all committed to offering invaluable parenting insights. From developmental milestones to hands-on product reviews, the website serves as a comprehensive guide for parents navigating the complexities of raising children. Each piece of advice and product recommendation is rooted in real-life experiences, ensuring authentic and practical guidance for the parenting community.`,
+    shortDescription:
+      'A platform where dads share expert parenting advice and product reviews.',
+    repository: 'https://github.com/SageTheThird',
+    stack: [
+      Stack.wordpress,
+      Stack.ahreafs,
+      Stack.jira,
+      Stack.slack,
+      Stack.zaplin,
+    ],
+    dimensions: [400, 680],
+    screenshots: [
+      '0ZBueyQ.png',
+      'Ij278E9.png',
+      'zxeolRP.png',
+      'A0K1edX.png',
+      'thLZCvv.png',
+      '056WP8O.png',
+      'L7BSmR5.png',
+      'Ij278E9.png',
+    ],
+    deployment: {
+      web: 'https://dadsagree.com/',
     },
     subProjects: [],
   },
