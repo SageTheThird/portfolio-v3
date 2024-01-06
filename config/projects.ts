@@ -91,7 +91,7 @@ export const projects: Project[] = [
         repository: 'https://github.com/darkblockio',
         description: `The Darkblock API is a tool for partners to integrate with the Darkblock Protocol quickly and easily with simple REST requests. The API enables you to mint Darkblocks, a piece of content that acts as an upgrade to an NFT, that only the NFT owner can access.`,
         deployment: {
-          web: 'https://darkblock.redoc.ly/openapi/core/tag/Darkblock-API/',
+          web: 'https://docs.darkblock.io',
         },
       },
       {

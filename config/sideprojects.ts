@@ -15,6 +15,17 @@ export interface SideProject {
 
 export const sideprojects: SideProject[] = [
   {
+    title: 'SpotiTube Sync - Seamless Music Synchronization',
+    slug: 'https://github.com/SageTheThird/SpotiTube-Library-Sync',
+    banner:
+      'https://opengraph.githubassets.com/1a2b3c4d5e6f7g8h9i0j/SageTheThird/SpotiTube-Library-Sync',
+    website: 'https://www.darkblock.io/',
+    description: `SpotiTube Sync is an innovative Python-based tool designed to effortlessly synchronize liked songs from YouTube Music to Spotify. This application streamlines the music management process by integrating a Chrome extension for easy control and monitoring. It features OAuth caching for both platforms, ensuring a smooth and uninterrupted user experience. The tool also implements a sophisticated caching mechanism for API calls, significantly reducing the likelihood of hitting rate limits and enhancing overall efficiency. Whether for personal enjoyment or managing extensive music libraries, SpotiTube Sync offers a convenient and reliable solution for music enthusiasts.`,
+    shortDescription:
+      'A Python tool for syncing YouTube Music likes to Spotify, featuring OAuth caching and a Chrome extension for easy management.',
+    repository: 'https://github.com/SageTheThird/SpotiTube-Library-Sync',
+  },
+  {
     title: 'WhatsCooking: A Comprehensive Recipe App',
     slug: 'https://github.com/SageTheThird/WhatsCooking-iOS',
     banner:
