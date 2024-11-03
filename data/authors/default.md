@@ -4,7 +4,7 @@ shortname: Sajid
 avatar: /static/avatar.jpg
 occupation: Full-Stack Software Engineer
 company: Darkblock
-resume: /static/SajidJavedResume2023.pdf
+resume: /static/SajidJavedResume2024.pdf
 email: ksajid505@gmail.com
 twitter: https://twitter.com/sajid.javed
 linkedin: https://www.linkedin.com/in/sajidjavedxyz
