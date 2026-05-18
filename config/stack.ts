@@ -80,6 +80,38 @@ export enum Stack {
   jira,
   msoffice,
   zaplin,
+
+  // === Modern Backend & AI ===
+  nestjs,
+  fastapi,
+  prisma,
+  postgres,
+  redis,
+  bullmq,
+  opensearch,
+  ffmpeg,
+  turborepo,
+
+  // === AWS (extended) ===
+  awsstepfunctions,
+  awsfargate,
+  awsamplify,
+
+  // === Edge / Workers ===
+  cloudflareworkers,
+  cloudflarekv,
+
+  // === Web3 / Blockchain ===
+  arweave,
+  polygon,
+  unlockprotocol,
+  ethers,
+  thirdweb,
+  siwe,
+
+  // === Payments ===
+  stripe,
+  paypal,
 }
 
 // export const WorkStack = [
@@ -454,4 +486,36 @@ export const StackInfo: Record<Stack, StackInfoMap> = {
     value: 'Zaplin',
     color: Colors.zaplin,
   },
+
+  // === Modern Backend & AI ===
+  [Stack.nestjs]: { value: 'NestJS', color: Colors.nestjs },
+  [Stack.fastapi]: { value: 'FastAPI', color: Colors.fastapi },
+  [Stack.prisma]: { value: 'Prisma', color: Colors.prisma },
+  [Stack.postgres]: { value: 'PostgreSQL', color: Colors.postgres },
+  [Stack.redis]: { value: 'Redis', color: Colors.redis },
+  [Stack.bullmq]: { value: 'BullMQ', color: Colors.bullmq },
+  [Stack.opensearch]: { value: 'OpenSearch', color: Colors.opensearch },
+  [Stack.ffmpeg]: { value: 'FFmpeg', color: Colors.ffmpeg },
+  [Stack.turborepo]: { value: 'Turborepo', color: Colors.turborepo },
+
+  // === AWS (extended) ===
+  [Stack.awsstepfunctions]: { value: 'AWS Step Functions', color: Colors.awsstepfunctions },
+  [Stack.awsfargate]: { value: 'AWS Fargate', color: Colors.awsfargate },
+  [Stack.awsamplify]: { value: 'AWS Amplify', color: Colors.awsamplify },
+
+  // === Edge / Workers ===
+  [Stack.cloudflareworkers]: { value: 'Cloudflare Workers', color: Colors.cloudflareworkers },
+  [Stack.cloudflarekv]: { value: 'Cloudflare KV', color: Colors.cloudflarekv },
+
+  // === Web3 / Blockchain ===
+  [Stack.arweave]: { value: 'Arweave', color: Colors.arweave },
+  [Stack.polygon]: { value: 'Polygon', color: Colors.polygon },
+  [Stack.unlockprotocol]: { value: 'Unlock Protocol', color: Colors.unlockprotocol },
+  [Stack.ethers]: { value: 'ethers.js', color: Colors.ethers },
+  [Stack.thirdweb]: { value: 'Thirdweb', color: Colors.thirdweb },
+  [Stack.siwe]: { value: 'SIWE', color: Colors.siwe },
+
+  // === Payments ===
+  [Stack.stripe]: { value: 'Stripe', color: Colors.stripe },
+  [Stack.paypal]: { value: 'PayPal', color: Colors.paypal },
 };

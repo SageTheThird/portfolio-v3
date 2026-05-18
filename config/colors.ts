@@ -100,4 +100,36 @@ export const Colors = {
   resume: '#EEEBFF',
   opensource: '#26BE00',
   tutorial: '#4dd0e1',
+
+  // Modern Backend & AI
+  nestjs: '#E0234E',
+  fastapi: '#009688',
+  prisma: '#2D3748',
+  postgres: '#336791',
+  redis: '#DC382D',
+  bullmq: '#FF6B35',
+  opensearch: '#005EB8',
+  ffmpeg: '#007808',
+  turborepo: '#0096FF',
+
+  // AWS (extended)
+  awsstepfunctions: '#CD2264',
+  awsfargate: '#FF9900',
+  awsamplify: '#FF9900',
+
+  // Edge / Workers
+  cloudflareworkers: '#F38020',
+  cloudflarekv: '#F38020',
+
+  // Web3 / Blockchain
+  arweave: '#222326',
+  polygon: '#8247E5',
+  unlockprotocol: '#FF6B6B',
+  ethers: '#2535A0',
+  thirdweb: '#F213A4',
+  siwe: '#1A1A1A',
+
+  // Payments
+  stripe: '#635BFF',
+  paypal: '#003087',
 };

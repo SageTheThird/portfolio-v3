@@ -33,6 +33,166 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Tenure — AI Knowledge Engine',
+    slug: 'tenure',
+    banner: '/static/projects/tenure/banner.svg',
+    website: '',
+    description: `A vague mandate — "make our internal corpus feel like sitting with an expert" — turned into a working AI knowledge engine in production, built end-to-end by a single engineer. Hand the system any document corpus (12+ formats, plus IMAP / Gmail / Outlook / Dropbox sync) and it serves back persona-controlled answers grounded in that material.
+
+The architectural bet that paid off: relevance logic lives in one isolated pod, so the orchestration layer has zero knowledge of scoring. Swapping ranking strategies doesn't touch the API. The result is a ~330K-LOC codebase that has stayed shippable across nine cycles of scope expansion — with hybrid BM25 + vector + reciprocal rank fusion behind a clean external API, voice interaction (STT + TTS), pluggable personas with per-conversation locking, and audit logging on every domain event.
+
+Engagement is private. Sole engineer. Architecture, implementation, infrastructure, ops — alone.`,
+    shortDescription:
+      'Hand any document corpus to a persona-controlled AI tutor. Hybrid retrieval, 12+ formats, voice — built end-to-end by one engineer.',
+    repository: null,
+    stack: [
+      Stack.typescript,
+      Stack.python,
+      Stack.nestjs,
+      Stack.nextjs,
+      Stack.react,
+      Stack.tailwind,
+      Stack.prisma,
+      Stack.postgres,
+      Stack.opensearch,
+      Stack.awslambda,
+      Stack.awsstepfunctions,
+      Stack.awss3,
+      Stack.awsfargate,
+      Stack.docker,
+      Stack.turborepo,
+    ],
+    dimensions: [400, 680],
+    screenshots: [],
+    deployment: {},
+    subProjects: [
+      {
+        title: 'API Orchestrator (NestJS)',
+        repository: null,
+        description: `The single brain. 12 modules (auth, ingestion, conversation, persona, course, email, cloud-storage, voice, audit, api-key, inspect, v1). Owns Step Functions invocation, S3 lifecycle, pod HTTP clients, and the public v1 API. Knows nothing about how relevance is scored — that's a pod's job.`,
+        deployment: {},
+      },
+      {
+        title: 'Retrieval Pod (Hybrid BM25 + kNN + RRF)',
+        repository: null,
+        description: `OpenSearch behind a thin Python service. BM25 for lexical, kNN for semantic, Reciprocal Rank Fusion to combine them, neighbor expansion for surrounding chunks. Deterministic dedup via sha256(courseId:content). All ranking strategy lives here, so the rest of the system stays stupid about scoring.`,
+        deployment: {},
+      },
+      {
+        title: 'Ingestion Pipeline (Step Functions + Lambdas)',
+        repository: null,
+        description: `5 esbuild-bundled task handlers chained by AWS Step Functions: parse → chunk → embed → index → finalize. Format validation at the boundary, before anything hits the database. PyMuPDF + Tesseract OCR for the formats most pipelines pretend don't exist (scanned PDFs, mixed layouts, multi-column docs).`,
+        deployment: {},
+      },
+      {
+        title: 'Email & Cloud Ingestion',
+        repository: null,
+        description: `IMAP, Gmail, Outlook, Dropbox. Recursive folder walking, MIME negotiation with HTML-first preference, dedup, full-sweep deletion that keeps S3 + OpenSearch + Postgres in sync. The unglamorous half of any real RAG product, built once, correctly.`,
+        deployment: {},
+      },
+    ],
+  },
+
+  {
+    title: 'Pureland — Web2.5 Token-Gated Film Distribution',
+    slug: 'pureland',
+    banner: '/static/projects/pureland/hero.png',
+    website: 'https://purelands.biz',
+    description: `Independent filmmakers can sell verifiable ownership of their work as NFTs while buyers checkout with a credit card and never see a wallet. That's the gap most crypto products fail to close — and the entire reason Pureland exists. Built solo in 11 weeks from blank repo to production.
+
+The architectural call that defines the product: the backend never touches video bytes. Cloudflare Workers across 300+ locations fetch encrypted segments from Arweave and decrypt them on-the-fly using Web Crypto API. The backend's only job is signing short-lived JWTs and reconciling state across three payment providers — Stripe, PayPal REST v2, and Unlock Protocol NFTs on Polygon. One order interface, three rails, all atomic and idempotent.
+
+The schema was built for the future the client hadn't asked for yet — multi-tier Patreon-style access primitives included from day one, so adding new tiers later won't require a migration. 37 services, 11 database models, 456 AES-256-encrypted video segments permanently stored on Arweave. Live now.`,
+    shortDescription:
+      'Web2.5 film distribution. NFTs on Polygon, encrypted video on Arweave, decryption at the edge. Credit-card checkout that mints on-chain underneath.',
+    repository: null,
+    stack: [
+      Stack.typescript,
+      Stack.nestjs,
+      Stack.prisma,
+      Stack.postgres,
+      Stack.nextjs,
+      Stack.react,
+      Stack.tailwind,
+      Stack.cloudflareworkers,
+      Stack.cloudflarekv,
+      Stack.arweave,
+      Stack.polygon,
+      Stack.unlockprotocol,
+      Stack.ethers,
+      Stack.thirdweb,
+      Stack.siwe,
+      Stack.stripe,
+      Stack.paypal,
+      Stack.redis,
+      Stack.bullmq,
+      Stack.docker,
+      Stack.githubactions,
+      Stack.ffmpeg,
+    ],
+    dimensions: [400, 680],
+    screenshots: [
+      '/static/projects/pureland/patron.png',
+    ],
+    deployment: {
+      web: 'https://purelands.biz',
+    },
+    subProjects: [
+      {
+        title: 'Creator Pipeline (FFmpeg → AES-256 → Arweave)',
+        repository: null,
+        description: `Drop in a master film, walk away. FFmpeg encodes HLS in 4 qualities (1080p / 720p / 480p / 360p) at 6-second segments. Each segment gets a unique AES-256-CBC key, encrypts in parallel, uploads to Arweave via Irys with multi-gateway failover, syncs metadata to Postgres and Cloudflare KV. Resumable on failure; 6-8x faster than naive sequential.`,
+        deployment: {},
+      },
+      {
+        title: 'Cloudflare Workers — Edge Decryption',
+        repository: null,
+        description: `Workers at 300+ locations fetch encrypted HLS segments from Arweave, decrypt on-the-fly with Web Crypto API, validate JWT scope, serve. Multi-gateway fallback chain (Irys → node1/2 → arweave.net → ar-io → g8way). The backend never sees video bytes — only signs short-lived URLs.`,
+        deployment: {
+          web: 'https://purelands.biz',
+        },
+      },
+      {
+        title: 'Unified Payment Orchestration',
+        repository: null,
+        description: `One OrdersService routes to Stripe (payment intents + webhooks), PayPal (REST v2, OAuth2, RSA cert-chain webhook verification, CRC32 + event-ID replay protection), or Unlock Protocol (NFT minting on Polygon). All paths atomic, idempotent, and audited. The frontend doesn't care which rail.`,
+        deployment: {},
+      },
+      {
+        title: 'Dual Auth (Wallet + Managed Wallets)',
+        repository: null,
+        description: `Thirdweb wallet (SIWE) or email/password — both issue the same JWT. Email signups auto-provision a managed wallet on Polygon with AES-256-encrypted private keys, so non-crypto users can buy NFTs with a credit card and never see the chain.`,
+        deployment: {},
+      },
+    ],
+  },
+
+  {
+    title: 'Leaderboard — Data Intelligence MVP',
+    slug: 'leaderboard',
+    banner: '/static/projects/leaderboard/banner.svg',
+    website: '',
+    description: `Most leadership-effectiveness signals are buried in fragmented public data — filings, scraped pages, scattered APIs that don't share IDs. Leaderboard's MVP fuses them into a single queryable knowledge graph ready for LLM analysis, so stakeholders can uncover organizational risks that no individual source surfaces alone.
+
+The work behind the demo is the unification engine: programmatic entity reconciliation across sources with no shared schema, enrichment pipelines that normalize messy filings, and an indexed graph base that makes every downstream query cheap. Engagement is private. Sole engineer.`,
+    shortDescription:
+      'Fuses fragmented public data into a queryable knowledge graph for LLM analysis. The unification engine no one wants to build.',
+    repository: null,
+    stack: [
+      Stack.python,
+      Stack.typescript,
+      Stack.nodejs,
+      Stack.postgres,
+      Stack.awslambda,
+      Stack.awss3,
+    ],
+    dimensions: [400, 680],
+    screenshots: [],
+    deployment: {},
+    subProjects: [],
+  },
+
+  {
     title:
       'Darkblock: Revolutionizing Content with Web3 - Unlock, Engage, and Monetize with NFTs!',
     slug: 'darkblock',
